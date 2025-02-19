@@ -11,19 +11,19 @@ This project develops an IoT-based Smart Farming System to monitor soil moisture
 # TEAM MEMBERS
 Team ID - T028
 
-*Dharshika Pugalenthi* - Team Leader
-*Abirami R* - Team member
-*Praneash Shiva S R* - Team member
-*Samruthi G P* - Team member
-*Santhosh Kumar* - Team member
-*Balamurugan R* - Team member
+*Dharshika Pugalenthi* - Team Leader 
+*Abirami R* - Team member 
+*Praneash Shiva S R* - Team member 
+*Samruthi G P* - Team member 
+*Santhosh Kumar* - Team member 
+*Balamurugan R* - Team member 
 
 Team Photo
 
 # TECHNICAL STACK
 
-Hardware: ESP32,Temperature and humidity sensor, pH sensor, GSM module, Relay Module, PIR sensor, Buzzer module, Solenoid Pump, Moisture sensor, LCD display
-Backend: Flask
-Frontend: HTML, CSS, BootStrap
-Database: SQL
-Other Tools: Git
+Hardware: ESP32,Temperature and humidity sensor, pH sensor, GSM module, Relay Module, PIR sensor, Buzzer module, Solenoid Pump, Moisture sensor, LCD display 
+Backend: Flask 
+Frontend: HTML, CSS, BootStrap 
+Database: SQL 
+Other Tools: Git 
