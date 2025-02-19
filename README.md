@@ -9,12 +9,12 @@ Problem Statement ID - PY090
 # TEAM MEMBERS
 Team ID - T028
 
-Dharshika Pugalenthi - Team Leader
-Abirami R - 
-Praneash Shiva S R - 
-Samruthi G P - 
-Santhosh Kumar -
-Balamurugan R - 
+- *Dharshika Pugalenthi* - Team Leader
+- *Abirami R* - 
+- *Praneash Shiva S R* - 
+- *Samruthi G P* - 
+- *Santhosh Kumar G* -
+- *Balamurugan R* - 
 
 Team Photo
 
