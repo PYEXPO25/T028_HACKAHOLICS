@@ -19,8 +19,7 @@ Team ID - T028
 * Balamurugan R - Team member 
 
 Team Photo
-![WhatsApp Image 2025-02-19 at 16 52 01_0c5df645](https://github.com/user-attachments/assets/fc12ff97-7aea-42ad-8c94-ccb4ec6eb2dc)
-
+![haa](https://github.com/user-attachments/assets/0f7d5416-54cc-41ef-925c-2639ae3af291)
 
 # TECHNICAL STACK
 
