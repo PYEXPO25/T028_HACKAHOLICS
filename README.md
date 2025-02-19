@@ -19,11 +19,23 @@ Team ID - T028
 * Balamurugan R - Team member 
 
 Team Photo
+![WhatsApp Image 2025-02-19 at 16 52 01_0c5df645](https://github.com/user-attachments/assets/fc12ff97-7aea-42ad-8c94-ccb4ec6eb2dc)
+
 
 # TECHNICAL STACK
 
-Hardware: ESP32,Temperature and humidity sensor, pH sensor, GSM module, Relay Module, PIR sensor, Buzzer module, Solenoid Pump, Moisture sensor, LCD display 
-Backend: Flask 
-Frontend: HTML, CSS, BootStrap 
-Database: SQL 
-Other Tools: Git 
+* Hardware: ESP32,Temperature and humidity sensor, pH sensor, GSM module, Relay Module, PIR sensor, Buzzer module, Solenoid Pump, Moisture sensor, LCD display 
+* Backend: Flask 
+* Frontend: HTML, CSS, BootStrap 
+* Database: SQL 
+* Other Tools: Git 
+
+# Getting Started
+Follow these steps to clone and run the application locally.
+
+## Prerequisites
+1. Install Python.
+2. Install Git.
+3. Clone this repository: bash git clone https://github.com/PYEXPO25/T028_HACKAHOLICS.git
+
+
