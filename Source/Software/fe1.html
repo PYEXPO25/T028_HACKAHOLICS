@@ -64,43 +64,9 @@
             0% { transform: translateY(0); }
             100% { transform: translateY(-5px); }
         }
-        .welcome-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.9);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            z-index: 9999;
-            transition: opacity 0.8s;
-        }
-        .welcome-screen.fade-out { opacity: 0; pointer-events: none; }
-        .progress-bar {
-            width: 80%;
-            height: 5px;
-            background: linear-gradient(to right, lightblue, violet);
-            margin-top: 15px;
-            position: relative;
-        }
-        .progress-bar div {
-            height: 100%;
-            width: 0;
-            background: linear-gradient(to right, teal, purple);
-            transition: width 2s;
-        }
     </style>
 </head>
 <body>
-    <div class="welcome-screen" id="welcomeScreen">
-        <h1>Signing in....</h1>
-        <div class="progress-bar"><div></div></div>
-    </div>
 
     <div class="container dashboard-container py-5">
         <h2 class="text-center mb-4">SMART IRRIGATION DASHBOARD</h2>
