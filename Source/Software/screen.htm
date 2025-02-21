@@ -34,20 +34,36 @@
             height: 100%;
             width: 0;
             background: linear-gradient(to right, teal, purple);
-            transition: width 2s;
+            animation: progressAnim 2s forwards;
+        }
+        @keyframes progressAnim {
+            from { width: 0; }
+            to { width: 100%; }
         }
 </style>
 <body>
     <div class="welcome-screen" id="welcomeScreen">
-        <h1>Signing in....</h1>
+        <h1 style="font-size:60px">Signing in....</h1>
         <div class="progress-bar"><div></div></div>
     </div>
     <script>
+    fe1html.addEventListener("DOMContentLoaded", function () {
+        setTimeout(() => {
+            fe1html.querySelector('.progress-bar div').style.width = '100%';
+        }, 100);
+        setTimeout(() => {
+            fe1html.getElementById('welcomeScreen').classList.add('fade-out');
+        }, 2500);
+    });
+    </script>
+    <script>
+
         window.onload=function(){
+            
             setTimeout(() => {
                 window.location.href="fe1.html"
             },6000)
-        }
+        };
     </script>
 </body>
 </html>
