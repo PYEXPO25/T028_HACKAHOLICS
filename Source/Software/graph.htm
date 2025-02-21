@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stable Sensor Graphs</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background-color: #f8f9fa; }
+        .container { max-width: 800px; margin-top: 10px; }
+        .graph-container { width: 100%; margin-bottom: 5px; position: relative; }
+        canvas { width: 50%; height: 10px; background: white; border-radius: 5px; }
+        .nav{
+            background: rgba(20, 20, 20, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Sensor Graphs</a>
+        <button class="btn btn-outline-light" onclick="location.href='fe1.html'">⬅ Back to Dashboard</button>
+    </div>
+</nav>
+
+<div class="container text-center">
+    <h6>📊 Live Sensor Data</h6>
+    <div class="graph-container"><small>🌱 Moisture</small><canvas id="moistureChart"></canvas></div>
+    <div class="graph-container"><small>💧 Humidity</small><canvas id="humidityChart"></canvas></div>
+    <div class="graph-container"><small>🌡 Temp</small><canvas id="temperatureChart"></canvas></div>
+    <div class="graph-container"><small>⚗️ pH</small><canvas id="phChart"></canvas></div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const charts = {};
+        const maxPoints = 20;
+
+        function createChart(ctx, color, yMin, yMax, stepSize) {
+            return new Chart(ctx, {
+                type: 'line',
+                data: { labels: Array(maxPoints).fill(''), datasets: [{ borderColor: color, data: Array(maxPoints).fill((yMin + yMax) / 2), tension: 0.2, pointRadius: 1, borderWidth: 2, backgroundColor: color + '33' }] },
+                options: { 
+                    responsive: true, maintainAspectRatio: true,
+                    animation: false,
+                    scales: { 
+                        x: { display: true },
+                        y: { 
+                            min: yMin, 
+                            max: yMax, 
+                            ticks: { stepSize: stepSize, precision: 1, font: { size: 8 } } 
+                        } 
+                    }
+                }
+            });
+        }
+
+        charts.moisture = createChart(document.getElementById('moistureChart').getContext('2d'), 'blue', 65, 75, 1);
+        charts.humidity = createChart(document.getElementById('humidityChart').getContext('2d'), 'green', 55, 65, 1);
+        charts.temperature = createChart(document.getElementById('temperatureChart').getContext('2d'), 'red', 25, 30, 0.5);
+        charts.ph = createChart(document.getElementById('phChart').getContext('2d'), 'orange', 6.3, 6.7, 0.1);
+
+        function updateChart(chart, value) {
+            const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
+            let dataset = chart.data.datasets[0].data;
+            dataset.shift();
+            dataset.push(value);
+            chart.update();
+        }
+
+        function fetchSensorData() {
+            fetch('http://localhost:5000/data')
+                .then(res => res.json())
+                .then(data => {
+                    updateChart(charts.moisture, data.soil_moisture);
+                    updateChart(charts.humidity, data.humidity);
+                    updateChart(charts.temperature, data.temperature);
+                    updateChart(charts.ph, data.ph);
+                })
+                .catch(err => console.error('Error fetching data:', err));
+        }
+
+        setInterval(fetchSensorData, 2000);
+    });
+</script>
+
+</body>
+</html>
