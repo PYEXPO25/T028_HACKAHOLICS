@@ -57,16 +57,16 @@ Follow these steps to clone and run the application locally.
 Images to demonstrate the user interface:
 Example pages: 
 1. Landing page :
-   https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/bb78d157d79d96619956e72e7092ffb1a3f45f89/Media/landingpage.png
+   [Click here to view the Landing Page](https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/bb78d157d79d96619956e72e7092ffb1a3f45f89/Media/landingpage.png)
 2. Dashboard:
-    https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/f9d61a3f39e1ce16a065f7969d4bd0647c6cf327/Media/Dashboard.png
+   [Click here to view the Dashboard](https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/f9d61a3f39e1ce16a065f7969d4bd0647c6cf327/Media/Dashboard.png)
 3. Chatbot:
-    https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/a8aa600dd584c81260d34e69faf05aa46ca6591b/Media/Chatbot.png
+   [Click here to view the Chatbot image](https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/a8aa600dd584c81260d34e69faf05aa46ca6591b/Media/Chatbot.png)
 
 # Resources
 PowerPoint Presentation: 
-https://1drv.ms/p/c/40b1625579606fea/ETnYmu-ZHTJGkvq0NwLGat0B7mmn6hwamYK1nIThEdEW5w?e=5zvksm
+[Click here to view the Landing Page](https://1drv.ms/p/c/40b1625579606fea/ETnYmu-ZHTJGkvq0NwLGat0B7mmn6hwamYK1nIThEdEW5w?e=5zvksm)
 Youtube link:
-https://youtu.be/221Tnm2ebsQ?si=WYGe1fySXAqs5d04
+[Click here to view the Landing Page](https://youtu.be/221Tnm2ebsQ?si=WYGe1fySXAqs5d04)
 
 
