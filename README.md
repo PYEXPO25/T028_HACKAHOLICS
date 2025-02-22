@@ -57,7 +57,7 @@ Follow these steps to clone and run the application locally.
 Images to demonstrate the user interface:
 Example pages: 
 1. Landing page : https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/bb78d157d79d96619956e72e7092ffb1a3f45f89/Media/landingpage.png
-2. Dashboard:
+2. Dashboard: https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/f9d61a3f39e1ce16a065f7969d4bd0647c6cf327/Media/Dashboard.png
 3. Chatbot: 
 
 # Resources
