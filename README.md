@@ -55,7 +55,7 @@ Follow these steps to clone and run the application locally.
 
 # UI Overview
 Images to demonstrate the user interface:
-Example pages: 
+* Example pages: 
 1. Landing page :
    [Click here to view the Landing Page](https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/bb78d157d79d96619956e72e7092ffb1a3f45f89/Media/landingpage.png)
 2. Dashboard:
