@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Moisture Prediction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e0f7da;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 300px;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Soil Moisture Predictor</h2>
+        <input type="number" id="xCoord" placeholder="Enter X Coordinate">
+        <input type="number" id="yCoord" placeholder="Enter Y Coordinate">
+        <button onclick="predictSoilMoisture()">Predict</button>
+        <p id="result"></p>
+    </div>
+    
+    <script>
+        function predictSoilMoisture() {
+            let x = document.getElementById("xCoord").value;
+            let y = document.getElementById("yCoord").value;
+            
+            if (x === "" || y === "") {
+                document.getElementById("result").innerText = "Please enter both coordinates.";
+                return;
+            }
+            
+            document.getElementById("result").innerText = "Predicted Soil Moisture: " + moisture + "%";
+        }
+    </script>
+</body>
+</html>
