@@ -51,7 +51,7 @@ Follow these steps to clone and run the application locally.
 
 # Start the Application
 1. Run the Flask application: bash flask run
-2. Open your browser and navigate to : http://127.0.0.1:5000/
+2. Open your browser and navigate to : http://127.0.0.1:5000
 
 # UI Overview
 Images to demonstrate the user interface:
