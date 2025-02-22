@@ -56,16 +56,14 @@ Follow these steps to clone and run the application locally.
 # UI Overview
 Images to demonstrate the user interface:
 Example pages: 
-1. Landing page :
+1. Landing page : 
 2. Dashboard:
 3. Chatbot: 
 
 # Resources
 PowerPoint Presentation: 
-
-Project video:
-
+https://1drv.ms/p/c/40b1625579606fea/ETnYmu-ZHTJGkvq0NwLGat0B7mmn6hwamYK1nIThEdEW5w?e=5zvksm
 Youtube link:
-
+https://youtu.be/221Tnm2ebsQ?si=WYGe1fySXAqs5d04
 
 
