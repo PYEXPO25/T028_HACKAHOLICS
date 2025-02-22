@@ -7,6 +7,11 @@ from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import InputRequired, Length, EqualTo
 import random
 import time
+import os
+import pandas as pd
+import numpy as np
+from sklearn.tree import DecisionTreeRegressor
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'  # Change this
@@ -101,6 +106,14 @@ def home():
 def dot():
     return render_template('/dot.html')
 
+@app.route('/graph.html')
+def graph():
+    return render_template('/graph.html')
+
+@app.route('/bot.html')
+def bot():
+    return render_template('/bot.html')
+
 @app.route('/fe1.html')
 def dance():
     return render_template('/fe1.html')
@@ -183,6 +196,7 @@ def insert_sensor_data():
     finally:
         cursor.close()
         conn.close()
+        
 
 # ✅ Route to Get Latest Sensor Data
 @app.route('/get_sensor_data', methods=['GET'])
@@ -193,6 +207,56 @@ def get_sensor_data():
     row = cursor.fetchone()
     conn.close()
     return jsonify(row) if row else jsonify({"message": "No sensor data found"})
+
+
+
+CSV_PATH = "soil_moisture_data (1).csv"
+
+# Train ML model
+def train_model_from_csv():
+    if not os.path.exists(CSV_PATH):
+        return None  # If no CSV, return None
+
+    df = pd.read_csv(CSV_PATH)
+    if not all(col in df.columns for col in ['x_coord', 'y_coord', 'soil_moisture']):
+        raise ValueError("CSV must contain 'x_coord', 'y_coord', 'soil_moisture' columns.")
+
+    X = df[['x_coord', 'y_coord']]
+    y = df['soil_moisture']
+
+    model = DecisionTreeRegressor()
+    model.fit(X, y)
+    return model
+
+model = train_model_from_csv()
+
+# Single route for both GET and POST
+@app.route('/mlbot', methods=['GET', 'POST'])
+def mlbot():
+    if request.method == 'GET':
+        return render_template('mlbot.html')
+
+    try:
+        if request.content_type != "application/json":
+            return jsonify({"error": "Invalid Content-Type. Use 'application/json'."}), 415
+
+        if model is None:
+            return jsonify({"error": "Model not trained. Ensure CSV file is present."}), 500
+
+        data = request.get_json()
+        x_coord = data.get('x_coord')
+        y_coord = data.get('y_coord')
+
+        if x_coord is None or y_coord is None:
+            return jsonify({"error": "Missing X or Y coordinate"}), 400
+
+        # Predict soil moisture
+        features = np.array([[float(x_coord), float(y_coord)]])
+        predicted_soil_moisture = model.predict(features)[0]
+
+        return jsonify({"predicted_soil_moisture": round(predicted_soil_moisture, 2)})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 400
 
 if __name__ == '__main__':
     app.run(debug=True)
