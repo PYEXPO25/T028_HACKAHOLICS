@@ -56,7 +56,7 @@ Follow these steps to clone and run the application locally.
 # UI Overview
 Images to demonstrate the user interface:
 Example pages: 
-1. Landing page : 
+1. Landing page : Media/landingpage.png
 2. Dashboard:
 3. Chatbot: 
 
