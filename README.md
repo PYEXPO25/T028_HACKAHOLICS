@@ -64,9 +64,9 @@ Example pages:
    [Click here to view the Chatbot image](https://github.com/PYEXPO25/T028_HACKAHOLICS/blob/a8aa600dd584c81260d34e69faf05aa46ca6591b/Media/Chatbot.png)
 
 # Resources
-PowerPoint Presentation: 
+1. PowerPoint Presentation: 
 [Click here to view the Landing Page](https://1drv.ms/p/c/40b1625579606fea/ETnYmu-ZHTJGkvq0NwLGat0B7mmn6hwamYK1nIThEdEW5w?e=5zvksm)
-Youtube link:
+2. Youtube link:
 [Click here to view the Landing Page](https://youtu.be/221Tnm2ebsQ?si=WYGe1fySXAqs5d04)
 
 
