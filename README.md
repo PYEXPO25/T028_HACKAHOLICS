@@ -37,5 +37,35 @@ Follow these steps to clone and run the application locally.
 1. Install Python.
 2. Install Git.
 3. Clone this repository: bash git clone https://github.com/PYEXPO25/T028_HACKAHOLICS.git
+4. Install Flask.
+5. Install Sql.
+
+## Installation
+1. Navigate to the project directory: bash cd T028_HACKAHOLICS
+2. Create a virtual environment: bash python -m venv venv
+3. Activate the virtual environment:
+   - * On Windows: bash venv\Scripts\activate
+     * On macOS\Linux: bash source venv/ bin/ activate
+4. Install dependencies: bash pip install -r requirements.txt
+5. Navigate to source bash cd source
+
+# Start the Application
+1. Run the Flask application: bash flask run
+2. Open your browser and navigate to : http://127.0.0.1:5000/
+
+# UI Overview
+Images to demonstrate the user interface:
+Example pages: 
+1. Landing page :
+2. Dashboard:
+3. Chatbot: 
+
+# Resources
+PowerPoint Presentation: 
+
+Project video:
+
+Youtube link:
+
 
 
